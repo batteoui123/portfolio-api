@@ -3,19 +3,27 @@
     "builds": [
       {
         "src": "src/contact.js",
-        "use": "@vercel/node"
+        "use": "@vercel/node",
+        "config": {
+          "includeFiles": ["src/**"] 
+        }
       }
     ],
     "routes": [
       {
-        "src": "/contact",
+        "src": "/api/contact",
         "dest": "src/contact.js",
         "methods": ["POST"]
       },
       {
-        "src": "/health",
+        "src": "/api/health",
         "dest": "src/contact.js",
         "methods": ["GET"]
+      },
+      {
+        "src": "/(.*)",
+        "status": 404,
+        "dest": "src/contact.js"
       }
     ]
   }
