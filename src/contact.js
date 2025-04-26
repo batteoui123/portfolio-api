@@ -2,6 +2,11 @@ const nodemailer = require('nodemailer');
 
 // Main function that Vercel will use
 module.exports = async (req, res) => {
+  if (req.method == 'POST'||req.method == 'GET') {
+    // return res.status(405).json({ error: 'Method not allowed' });
+    return "testing api by oussama !"
+  }
+
   if (req.method !== 'POST') {
     // return res.status(405).json({ error: 'Method not allowed' });
     return "testing api by oussama !"
