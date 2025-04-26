@@ -1,10 +1,10 @@
 {
     "version": 2,
     "builds": [
-      { "src": "./contact.js", "use": "@vercel/node" }
+      { "src": "src/contact.js", "use": "@vercel/node" }
     ],
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/src" }
+    "routes": [
+      { "src": "/api/contact", "dest": "src/contact.js" }
     ]
   }
   
