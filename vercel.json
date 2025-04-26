@@ -4,7 +4,15 @@
       { "src": "src/contact.js", "use": "@vercel/node" }
     ],
     "routes": [
-      { "src": "/api/contact", "dest": "src/contact.js" }
+      { 
+        "src": "/api/contact", 
+        "dest": "src/contact.js",
+        "methods": ["POST", "OPTIONS"],
+        "headers": {
+          "Access-Control-Allow-Origin": "https://portfo-jet-two.vercel.app",
+          "Access-Control-Allow-Methods": "POST, OPTIONS",
+          "Access-Control-Allow-Headers": "Content-Type"
+        }
+      }
     ]
   }
-  
