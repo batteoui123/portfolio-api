@@ -2,6 +2,11 @@ const nodemailer = require('nodemailer');
 
 // Main function that Vercel will use
 module.exports = async (req, res) => {
+    // CORS headers to allow requests from your frontend https://portfo-jet-two.vercel.app/
+    res.setHeader('Access-Control-Allow-Origin', 'https://portfo-jet-two.vercel.app'); // Remplace par l'URL de ton frontend en production
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS'); // Permet les requêtes POST
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Permet l'en-tête Content-Type pour les requêtes JSON
+    
   
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
