@@ -43,5 +43,6 @@
 
 
 module.exports = (req, res) => {
+  console.log(req,res)
   res.status(200).send("Hello! The contact API is working!");
 };
