@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 // Main function that Vercel will use
 module.exports = async (req, res) => {
     // CORS headers
-    res.setHeader('Access-Control-Allow-Origin', 'https://portfo-jet-two.vercel.app'); 
+    res.setHeader('Access-Control-Allow-Origin', 'https://batteoui.vercel.app'); 
     res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     
